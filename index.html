@@ -135,7 +135,7 @@ function getComments(startingBlock) {
         var allList = document.getElementById('allComments');
         var newItem = document.createElement('li');
         var newPre = document.createElement('pre');
-        newPre.innerText = r.args.sender.slice(0,20) + '... on ' + dateConverter(r.args.timestamp) + '\n\n' + r.args.comment;
+        newPre.innerText = r.args.sender.slice(0,15) + '... on ' + dateConverter(r.args.timestamp) + '\n\n' + r.args.comment;
         newItem.appendChild(newPre);
 
         if (allList.length == 0) {
