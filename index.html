@@ -26,7 +26,7 @@
       
   <h4>축하메세지 남기기</h4>
   <textarea id="newComment" rows="2" cols="30" style="width:600px;"></textarea><br>
-  <button onclick="saveComment()">댓글저장</button>
+  <button onclick="saveComment()">댓글 저장</button>
   <div id="newTxid"></div>
 
   <ul id="targetComments" class="comments">
@@ -149,7 +149,8 @@ function getComments(startingBlock) {
 }
 
 function dateConverter(unix_timestamp) {
-   return new Date(unix_timestamp * 1000);
+  var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+  return new Date(unix_timestamp * 1000).toLocaleDateString('kr-KR', options);
 }
 </script>
 </html>
