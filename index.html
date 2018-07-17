@@ -80,7 +80,7 @@ function initData() {
   weddingVows.content(function(err, content){
     if (typeof content !== 'undefined') {
       if(content.length != 0)  
-        document.getElementById('vows').innerHTML = content;
+        document.getElementById('vows').innerHTML = unhexlify(content);
     }
   });
 }
